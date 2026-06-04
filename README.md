@@ -23,7 +23,26 @@ npm run build
 npm run preview
 ```
 
-Deploy the `dist` folder to GitHub Pages, Netlify, or Vercel.
+## Deploy to Vercel
+
+### Option A: Import from GitHub (recommended)
+
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in.
+2. Import [Rainhard-Bonnke/portfolio](https://github.com/Rainhard-Bonnke/portfolio).
+3. Vercel detects Vite automatically. Keep:
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Click **Deploy**.
+
+Future pushes to `main` redeploy automatically.
+
+### Option B: Vercel CLI
+
+```bash
+npm install
+npx vercel login
+npm run deploy
+```
 
 ## Contact form
 
@@ -31,4 +50,4 @@ The contact form posts to the existing Google Apps Script endpoint configured in
 
 ## CV
 
-Place your resume at `public/Rainhard-bonnke-cv.docx` for the download button to work.
+Your resume lives at `public/Rainhard-bonnke-cv.docx` for the download button.
