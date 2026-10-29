@@ -4,10 +4,10 @@ export const ABOUT_IMAGE = '/home.jpeg'
 export const SITE = {
   name: 'Rainhard Bonnke',
   portraitImage: PORTRAIT_IMAGE,
-  title: 'Full-Stack Developer',
+  title: 'AI product developer · full-stack engineer',
   location: 'Nairobi, Kenya',
   tagline:
-    'I design and ship production web applications, from React frontends to APIs, databases, and AI-powered features.',
+    'I build full-stack product experiences that connect user flows, business logic, and AI-powered decision support into software people can trust.',
   github: 'https://github.com/Rainhard-Bonnke',
   email: 'bonnkereinhard654@gmail.com',
   phone: '0745617108',
@@ -24,44 +24,51 @@ export const SITE = {
   },
 }
 
+export const PROFESSIONAL_WORK = {
+  company: 'CRES Dynamics',
+  url: 'https://cresdynamics.com/',
+  summary: 'Independently, I deliver contract projects from brief through launch.',
+}
+
 export const SKILLS = [
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Responsive UI'] },
-  { category: 'Backend', items: ['Node.js', 'REST APIs', 'Supabase', 'Authentication', 'PostgreSQL'] },
-  { category: 'Tools & AI', items: ['Git & GitHub', 'TanStack Query', 'OpenAI integrations', 'PDF/Canvas exports'] },
+  { category: 'Frontend', items: ['React', 'TypeScript', 'Vite', 'Responsive UI', 'Design systems'] },
+  { category: 'Backend & APIs', items: ['Node.js', 'Express', 'REST APIs', 'Supabase', 'PostgreSQL', 'Authentication'] },
+  { category: 'AI & Data', items: ['Python', 'scikit-learn', 'XGBoost', 'Model evaluation', 'Prediction workflows'] },
+  { category: 'Product tooling', items: ['Git & GitHub', 'TanStack Query', 'OpenAI integrations', 'PDF/Canvas exports'] },
 ]
 
 export const EXPERIENCE = [
   {
-    period: '2024 to Present',
-    role: 'Full-Stack Developer',
-    detail: 'Building ERP, safari booking, inventory, and travel products with React, TypeScript, and modern backends.',
+    period: 'Product delivery',
+    role: 'From brief to working software',
+    detail: 'Break product needs into usable flows, then implement and refine the frontend, APIs, and data layer.',
   },
   {
-    period: '2023 to 2024',
-    role: 'Web Developer',
-    detail: 'Delivered client-facing apps with React and Node.js, focusing on performance and maintainable code.',
+    period: 'Full-stack engineering',
+    role: 'Frontend through backend',
+    detail: 'Build React and TypeScript interfaces alongside APIs, authentication, persistence, and integrations.',
   },
   {
-    period: '2022 to 2023',
-    role: 'UI & Application Development',
-    detail: 'Designed interfaces and shipped interactive web experiences end to end.',
+    period: 'AI and data products',
+    role: 'Models into useful workflows',
+    detail: 'Connect prediction pipelines and intelligent features to clear interfaces, evaluation, and user actions.',
   },
 ]
 
 export const SERVICES = [
   {
-    title: 'Full-Stack Development',
+    title: 'Full-Stack Product Delivery',
     description:
-      'End-to-end web apps with React frontends, typed APIs, auth, and database design ready for real users.',
+      'Take product ideas from concept to working software with clean frontend architecture, robust APIs, and practical backend systems.',
   },
   {
-    title: 'Product Engineering',
+    title: 'Business Workflow Platforms',
     description:
-      'ERP, inventory, booking, and dashboards tailored to business workflows with clean, scalable architecture.',
+      'Design and build operational tools for commerce, ERP, bookings, inventory, and internal process automation that teams can actually use.',
   },
   {
-    title: 'AI-Enhanced Features',
+    title: 'AI-Enabled Product Features',
     description:
-      'Integrate intelligent assistants, insights, and automation using modern AI APIs and thoughtful UX.',
+      'Integrate prediction, analytics, and AI-assisted workflows into user-friendly experiences without compromising usability or trust.',
   },
 ]

@@ -1,18 +1,25 @@
 :root {
-  --bg: #080808;
-  --bg-elevated: #121212;
-  --bg-card: #161616;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --accent: #ff004f;
-  --accent-soft: rgba(255, 0, 79, 0.15);
-  --accent-glow: rgba(255, 0, 79, 0.35);
-  --radius: 12px;
-  --radius-lg: 20px;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --container: min(1120px, calc(100% - 2.5rem));
+  --bg: #f7f1e9;
+  --bg-elevated: #efe6dc;
+  --bg-card: #fffcf8;
+  --surface: rgba(255, 255, 255, 0.7);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --border: rgba(15, 28, 26, 0.12);
+  --text: #111b18;
+  --text-muted: #5f6c65;
+  --accent: #d55838;
+  --accent-strong: #af3e27;
+  --accent-soft: rgba(213, 88, 56, 0.12);
+  --accent-glow: rgba(213, 88, 56, 0.24);
+  --lime: #d2f388;
+  --blue: #2d5ce6;
+  --slate: #172521;
+  --ink: #0f1715;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-display: 'Syne', 'Space Grotesk', sans-serif;
+  --container: min(1180px, calc(100% - 2.5rem));
   --nav-height: 72px;
   --section-pad-y: 5rem;
 }
@@ -39,6 +46,12 @@ body {
   overflow-x: hidden;
   padding-left: env(safe-area-inset-left, 0);
   padding-right: env(safe-area-inset-right, 0);
+  background-image:
+    radial-gradient(rgba(24, 34, 30, 0.05) 0.8px, transparent 0.8px),
+    radial-gradient(circle at top right, rgba(45, 92, 230, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(247, 241, 233, 0.96));
+  background-size: 16px 16px, 100% 100%, 100% 100%;
+  background-repeat: repeat, no-repeat, no-repeat;
 }
 
 #root {
@@ -67,6 +80,17 @@ textarea {
 
 section {
   padding: var(--section-pad-y) 0;
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+html.motion-ready main > section:not(.hero) {
+  opacity: 1;
+  transform: translateY(12px);
+  transition: transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.motion-ready main > section:not(.hero).is-visible {
+  transform: translateY(0);
 }
 
 .container {
@@ -78,7 +102,7 @@ section {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.75rem;
@@ -91,6 +115,7 @@ section {
   line-height: 1.15;
   margin-bottom: 1rem;
   overflow-wrap: break-word;
+  letter-spacing: -0.03em;
 }
 
 .section-intro {
@@ -105,32 +130,36 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  min-height: 44px;
+  padding: 0.8rem 1.5rem;
+  min-height: 46px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9375rem;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
+  letter-spacing: -0.01em;
+  box-shadow: 0 10px 30px rgba(17, 27, 24, 0.06);
 }
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: #fffefa;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px var(--accent-glow);
+  box-shadow: 0 16px 30px var(--accent-glow);
+  background: var(--accent-strong);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--text);
   border: 1px solid var(--border);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
@@ -141,6 +170,27 @@ section {
 ::selection {
   background: var(--accent-soft);
   color: var(--text);
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.motion-ready main > section:not(.hero) {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .visually-hidden {

@@ -1,0 +1,48 @@
+.hero-scene-unavailable .hero-scene-canvas { display: none; }
+
+.hero-scene-unavailable::after {
+  position: absolute;
+  inset: 20% 12%;
+  border: 1px solid rgba(255, 118, 84, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(213, 243, 165, 0.035), 0 0 0 72px rgba(255, 118, 84, 0.035);
+  content: '';
+}
+
+.hero-scene-project-links {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.hero-scene-project-links a:focus-visible {
+  position: fixed;
+  z-index: 20;
+  right: 1rem;
+  bottom: 1rem;
+  width: auto;
+  height: auto;
+  clip: auto;
+  padding: 0.8rem 1rem;
+  background: #f7f1e9;
+  color: #101413;
+}
+
+@media (max-width: 768px) {
+  .hero-scene { inset: -2% -10% 1% -10%; opacity: 0.8; }
+  .hero-scene-toggle { right: 12%; bottom: 14%; }
+  .hero-scene-hint { right: 12%; bottom: 9%; }
+}
+
+@media (max-width: 520px) {
+  .hero-scene { inset: 2% -25% 0 -18%; opacity: 0.68; }
+  .hero-scene-toggle { right: 44%; bottom: -34%; min-height: 34px; font-size: 0.58rem; }
+  .hero-scene-hint { right: 44%; bottom: -43%; font-size: 0.46rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene-toggle { transition: none; }
+}

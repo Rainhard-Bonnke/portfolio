@@ -5,13 +5,21 @@ export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="footer">
-      <div className="container footer-inner">
-        <p>
-          Copyright © {year} {SITE.name.split(' ')[0]}. Made with care by Spine
-        </p>
-        <a href={SITE.github} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
+      <div className="container footer-shell">
+        <div className="footer-brand">
+          <span className="footer-mark">RB</span>
+          <div>
+            <strong>{SITE.name}</strong>
+            <p>Product developer · Remote-ready</p>
+          </div>
+        </div>
+
+        <div className="footer-meta">
+          <p>Copyright © {year} {SITE.name.split(' ')[0]}. Built with care.</p>
+          <a href={SITE.github} target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
       </div>
     </footer>
   )

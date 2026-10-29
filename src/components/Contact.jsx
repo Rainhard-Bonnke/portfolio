@@ -20,6 +20,8 @@ function SocialIcon({ href, label, children }) {
 export default function Contact() {
   const [status, setStatus] = useState('')
   const [sending, setSending] = useState(false)
+  const [interest, setInterest] = useState('')
+  const interests = ['Full-time role', 'Project build', 'Just saying hello']
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -110,11 +112,28 @@ export default function Contact() {
         </div>
 
         <form className="contact-form" name="submit-to-google-sheet" onSubmit={handleSubmit}>
+          <fieldset className="contact-interest">
+            <legend>What brings you here?</legend>
+            <div>
+              {interests.map((option) => (
+                <button
+                  type="button"
+                  key={option}
+                  className={interest === option ? 'selected' : ''}
+                  aria-pressed={interest === option}
+                  onClick={() => setInterest(option)}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </fieldset>
+          <input type="hidden" name="Interest" value={interest} />
           <input type="text" name="Name" placeholder="Your Name" required />
           <input type="email" name="Email" placeholder="Your Email" required />
           <textarea name="Message" rows={6} placeholder="Your Message" required />
           <button type="submit" className="btn btn-primary" disabled={sending}>
-            {sending ? 'Sending…' : 'Submit'}
+            {sending ? 'Sending…' : 'Send a note ↗'}
           </button>
           {status && (
             <p className="form-status" role="status">

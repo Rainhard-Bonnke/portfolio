@@ -1,0 +1,90 @@
+.journey-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 120;
+  height: 2px;
+  background: rgba(247, 241, 233, 0.1);
+  pointer-events: none;
+}
+
+.journey-progress span {
+  display: block;
+  width: var(--page-progress, 0%);
+  height: 100%;
+  background: linear-gradient(90deg, #d5f3a5, #ff7654 72%, #ffcf8c);
+  box-shadow: 0 0 14px rgba(255, 118, 84, 0.68);
+  transition: width 100ms linear;
+}
+
+.journey-rail {
+  position: fixed;
+  top: 50%;
+  right: 0.7rem;
+  z-index: 90;
+  display: grid;
+  width: 30px;
+  gap: 0.2rem;
+  padding: 0.65rem 0.55rem;
+  border: 1px solid rgba(247, 241, 233, 0.14);
+  background: rgba(16, 20, 19, 0.72);
+  opacity: 0.58;
+  transform: translate(0, -50%);
+  transition: width 240ms ease, opacity 240ms ease;
+  backdrop-filter: blur(14px);
+}
+
+.journey-rail:hover,
+.journey-rail:focus-within { width: 138px; opacity: 1; }
+
+.journey-rail-title {
+  overflow: hidden;
+  padding: 0.25rem 0 0.45rem;
+  color: rgba(247, 241, 233, 0.48);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.journey-rail:hover .journey-rail-title,
+.journey-rail:focus-within .journey-rail-title { opacity: 1; }
+
+.journey-rail a {
+  display: grid;
+  min-height: 30px;
+  grid-template-columns: 1fr 6px;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0.15rem;
+  color: rgba(247, 241, 233, 0.58);
+  font-size: 0.58rem;
+  transition: color 200ms ease, background 200ms ease;
+}
+
+.journey-rail a:hover,
+.journey-rail a.active { color: #fff7f1; background: rgba(255, 255, 255, 0.07); }
+.journey-rail-number { display: none; color: #ff9a7e; font-size: 0.5rem; font-weight: 700; }
+.journey-rail-label { display: none; overflow: hidden; white-space: nowrap; }
+.journey-rail:hover a,
+.journey-rail:focus-within a { grid-template-columns: 19px 1fr 6px; gap: 0.42rem; padding-inline: 0.45rem; }
+.journey-rail:hover .journey-rail-number,
+.journey-rail:focus-within .journey-rail-number,
+.journey-rail:hover .journey-rail-label,
+.journey-rail:focus-within .journey-rail-label { display: inline; }
+.journey-rail a i { width: 5px; height: 5px; border: 1px solid rgba(247, 241, 233, 0.34); border-radius: 50%; }
+.journey-rail a.active i { border-color: #d5f3a5; background: #d5f3a5; box-shadow: 0 0 10px rgba(213, 243, 165, 0.72); }
+
+@media (max-width: 1000px) {
+  .journey-rail { right: 0.6rem; padding-inline: 0.35rem; }
+}
+
+@media (max-width: 768px) {
+  .journey-rail { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-rail,
+  .journey-rail a,
+  .journey-progress span { transition: none; }
+}
