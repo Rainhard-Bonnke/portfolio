@@ -10,6 +10,13 @@ const FILTERS = [
   { id: 'experiences', label: 'Experiences' },
 ]
 
+const PROJECT_STATS = [
+  { value: '5+', label: 'product launches' },
+  { value: '3', label: 'delivery modes' },
+  { value: '10+', label: 'workflow systems' },
+  { value: 'AI + ops', label: 'product focus' },
+]
+
 function ProjectPreview({ project, eager = false }) {
   const domain = project.demo?.replace(/^https?:\/\//i, '').replace(/\/$/, '') || project.name
   const previewImage = project.previewImage || project.repoImage || project.demoImage
@@ -115,6 +122,15 @@ export default function Projects() {
               <span><strong>AI</strong> + ops systems</span>
             </div>
           </div>
+        </div>
+
+        <div className="projects-stats" aria-label="Delivery proof points">
+          {PROJECT_STATS.map((stat) => (
+            <div className="project-stat" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
         </div>
 
         {lead && (

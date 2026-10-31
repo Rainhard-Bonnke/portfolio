@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-meta">
-          <p>Copyright © {year} {SITE.name.split(' ')[0]}. Built with care.</p>
+          <p>Copyright © {year} {SITE.name.split(' ')[0]}. Available for product roles and contract delivery.</p>
           <a href={SITE.github} target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
