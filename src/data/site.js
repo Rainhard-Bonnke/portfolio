@@ -27,7 +27,7 @@ export const SITE = {
 export const PROFESSIONAL_WORK = {
   company: 'CRES Dynamics',
   url: 'https://cresdynamics.com/',
-  summary: 'Independently, I deliver contract projects from brief through launch.',
+  summary: 'I contribute to team builds at CRES Dynamics and independently deliver contract projects from brief through launch.',
 }
 
 export const SKILLS = [

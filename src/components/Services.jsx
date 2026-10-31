@@ -11,10 +11,10 @@ export default function Services() {
     <section id="services" className="services">
       <div className="container">
         <span className="section-label">What I offer</span>
-        <h2 className="section-title">Product work that ships.</h2>
+        <h2 className="section-title">Product work that gets shipped.</h2>
         <p className="section-intro">
           I help teams turn ideas into working digital products across frontend experiences, backend systems,
-          workflow tooling, and AI-assisted features that support real business operations.
+          workflow tooling, and AI-assisted features built for real business operations and fast-moving product teams.
         </p>
         <div className="services-grid">
           {SERVICES.map((service, i) => {

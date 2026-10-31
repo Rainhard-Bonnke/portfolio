@@ -58,7 +58,7 @@ export const PROJECTS = [
     description:
       'A team-built safari platform for browsing destinations and packages, with secure customer accounts, booking and payment flows, and an admin-managed content system.',
     highlights: ['Customer auth & booking flows', 'Payments + admin CMS', 'Team collaboration'],
-    contribution: 'Collaborative project',
+    contribution: 'CRES Dynamics · team delivery',
     featured: true,
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS = [
     description:
       'A full-stack menswear storefront with category-led discovery, product pages, new arrivals, sale collections, and WhatsApp ordering.',
     highlights: ['Full-stack commerce build', 'Product discovery & sale flows', 'Team collaboration'],
-    contribution: 'Collaborative project',
+    contribution: 'CRES Dynamics · team delivery',
     featured: true,
   },
   {
@@ -92,7 +92,7 @@ export const PROJECTS = [
     description:
       'A lighting-commerce platform combining product discovery and room-based guides with an operational catalog, admin tools, and WhatsApp ordering.',
     highlights: ['Storefront + admin catalog', 'Product feeds & ordering', 'Team collaboration'],
-    contribution: 'Collaborative project',
+    contribution: 'CRES Dynamics · team delivery',
     featured: false,
   },
   {

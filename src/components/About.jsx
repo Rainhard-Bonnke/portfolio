@@ -14,16 +14,16 @@ export default function About() {
         </div>
         <div className="about-copy">
           <span className="section-label">About</span>
-          <h2 className="section-title">I build products that make operations feel easier.</h2>
+          <h2 className="section-title">I build systems that help teams move faster.</h2>
           <p>
             I&apos;m a product-focused developer based in {SITE.location}. I work from the first business problem
             through interface design, backend logic, data flow, and deployment, with a strong focus on software
-            people can actually use day to day.
+            people can trust and use every day.
           </p>
           <p>
             My work spans commerce platforms, ERP systems, booking flows, irrigation scheduling, and machine-learning
-            driven decision tools. I enjoy the full product lifecycle: understanding the workflow, building clean
-            systems, and refining the experience until it feels reliable and intuitive.
+            driven decision tools. I enjoy the full product lifecycle: understanding the workflow, building dependable
+            systems, and refining the experience until it feels clear, stable, and intuitive.
           </p>
 
           <aside className="about-professional-work" aria-label="Professional work">

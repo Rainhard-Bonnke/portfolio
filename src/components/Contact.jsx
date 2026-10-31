@@ -51,8 +51,8 @@ export default function Contact() {
           <span className="section-label">Contact</span>
           <h2 className="section-title">Let&apos;s work together</h2>
           <p className="section-intro">
-            Open to full-stack developer roles, freelance builds, and collaborations. Reach out
-            via the form or the channels below.
+            Open to product engineering roles, contract delivery, and partner-led builds where clear execution matters.
+            Reach out via the form or the channels below.
           </p>
 
           <ul className="contact-details">

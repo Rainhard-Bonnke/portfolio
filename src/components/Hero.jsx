@@ -30,21 +30,27 @@ export default function Hero() {
       <div className="hero-crosshair" aria-hidden="true">RB<span>01 / 04</span></div>
       <div className="container hero-grid">
         <div className="hero-content">
-          <p className="hero-eyebrow"><span /> AVAILABLE FOR SELECT PROJECTS <i /> {SITE.location}</p>
-          <h1><span>Complex things.</span><span className="hero-highlight">Beautifully simple.</span></h1>
-          <p className="hero-byline">{SITE.name} <i /> Product engineer &amp; full-stack developer</p>
+          <p className="hero-eyebrow"><span /> CRES DYNAMICS <i /> {SITE.location} <i /> OPEN TO ROLES + CONTRACTS</p>
+          <h1><span>Complex briefs.</span><span className="hero-highlight">Shipped products.</span></h1>
+          <p className="hero-byline">{SITE.name} <i /> Full-stack product engineer</p>
           <p className="hero-lead">
-            I turn tangled workflows into products that feel effortless. Thoughtful interfaces, sturdy systems, and a little bit of wonder.
+            I work with CRES Dynamics and independently deliver contract builds—from the first brief to reliable software in people&apos;s hands.
           </p>
+          <div className="hero-proof" aria-label="Core strengths">
+            <span>CRES Dynamics</span>
+            <span>Contract delivery</span>
+            <span>AI workflows</span>
+            <span>Product systems</span>
+          </div>
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
-              Enter the work <span aria-hidden="true">↗</span>
+              Selected work <span aria-hidden="true">↗</span>
             </a>
-            <a href="#contact" className="btn btn-outline">
-              Start a conversation <span aria-hidden="true">↗</span>
+            <a href={SITE.cvPath} download className="btn btn-outline">
+              Download CV <span aria-hidden="true">↓</span>
             </a>
           </div>
-          <p className="hero-footnote"><span>01</span> DESIGN WITH INTENT <b /> BUILD WITH CARE <b /> SHIP FOR PEOPLE</p>
+          <a className="hero-contact-link" href="#contact">Have a role or a project in mind? <span>Let&apos;s talk ↗</span></a>
         </div>
         <div className="hero-visual">
           <Suspense fallback={<div className="hero-scene-placeholder" aria-hidden="true" />}>

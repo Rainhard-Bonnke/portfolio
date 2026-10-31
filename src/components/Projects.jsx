@@ -107,7 +107,14 @@ export default function Projects() {
             <span className="section-label">Selected work / 2025—26</span>
             <h2 className="section-title">Product work built for real outcomes.</h2>
           </div>
-          <p>Commerce, operations, and AI-enabled tools designed around actual workflows, business logic, and user trust.</p>
+          <div className="projects-header-stack">
+            <p>Commerce, operations, and AI-enabled tools designed around actual workflows, business logic, and user trust.</p>
+            <div className="projects-proof" aria-label="Portfolio proof points">
+              <span><strong>5+</strong> launches</span>
+              <span><strong>CRES</strong> team + contract</span>
+              <span><strong>AI</strong> + ops systems</span>
+            </div>
+          </div>
         </div>
 
         {lead && (
